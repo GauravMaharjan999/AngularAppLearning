@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ELearningApp';
+  searchValue: string = ""; 
+
+  setSearchText(value: string){
+    this.searchValue = value;
+
+  }
 }

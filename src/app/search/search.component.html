@@ -1,0 +1,12 @@
+<div class="row justify-content-center p-5">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" [(ngModel)]="searchValue" (input)="onSearchTextChanged()">
+        <button class="btn btn-primary" type="button" id="basic-addon2">Search</button>
+      </div>
+    </div>
+    <div>
+        <p *ngIf="searchValue.trim()!=''"><strong>Search result for :</strong>{{searchValue}}</p>
+    </div>
+</div>
+  

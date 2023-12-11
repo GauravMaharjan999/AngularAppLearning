@@ -1,11 +1,18 @@
+<!--  
+<div class="row">
+    
+    <div class="col-md-3" *ngFor="let tutor of tutors">
+        <app-tutor *ngIf="searchValue === '' || tutor.name.toLowerCase().includes(searchValue)"  [tutor]="tutor">
+        </app-tutor>
+    </div>
+        
+    
+</div> -->
 
-<img [src]="tutor.tutorProfileImagePath" height="200px" width="200px">
-<div class="tutor-info">
-    <p>Name:{{tutor.name}}</p>
-    <p>Address:{{tutor.address}}</p>
-    <p>Phone Number :{{"+977 "+ tutor.phoneNumber}}</p>
-    <p>Hiring Price :{{ getHiringPrice()}}</p>
-    <p><button class="btn btn-primary" [disabled]="getHiringPrice()<=0">Hire Now</button></p>
-    <input type="text"  bind-value= "name">
+<div class="row px-5">
+    <ng-container *ngFor="let tutor of tutors">
+        <div class="col-md-3" *ngIf="searchValue === '' || tutor.name.toLowerCase().includes(searchValue.toLowerCase())">
+            <app-tutor [tutor]="tutor"></app-tutor>
+        </div>
+    </ng-container>
 </div>
-  

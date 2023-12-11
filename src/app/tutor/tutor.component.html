@@ -1,0 +1,10 @@
+<div class="card" style="margin:8px;">
+    <img class="card-img-top" [src]="tutor.tutorProfileImagePath" alt="Card image cap">
+    <div class="card-body">
+      <p>Name:{{tutor.name}}</p>
+      <p>Address:{{tutor.address}}</p>
+      <p>Phone Number :{{"+977 "+ tutor.phoneNumber}}</p>
+      <p>Hiring Price :{{ tutor.hiringPrice}}</p>
+      <p><button [name]="tutor.hiringPrice" class="btn btn-primary" [disabled]="!tutor.hiringPrice" (click)="hireNowClick($event)">Hire Now</button></p>
+    </div>
+</div>

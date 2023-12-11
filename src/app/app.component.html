@@ -1,2 +1,3 @@
 <app-header></app-header>
-<app-tutor-list></app-tutor-list>
+<app-search (searchTextChanged)="setSearchText($event)"></app-search>
+<app-tutor-list [searchValue]="searchValue"></app-tutor-list>
